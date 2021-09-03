@@ -1,0 +1,208 @@
+/*Primary */
+/*Gradient */
+/*Text */
+/*Dividers */
+/*Primary */
+/*Gradient */
+/*Text */
+/*Dividers */
+.faq-container {
+  width: 58rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  background-color: white;
+  border-radius: 1rem;
+  margin: 2rem;
+}
+
+.faq-container .img-container {
+  position: relative;
+  padding: 3.1rem 0;
+  z-index: 0;
+}
+
+.faq-container .img-container .img2 {
+  position: absolute;
+  top: -18rem;
+  left: -36rem;
+  z-index: -1;
+}
+
+.faq-container .img-container .outside {
+  position: absolute;
+  top: 11rem;
+  left: -5.6rem;
+}
+
+.faq-container .img-container .inside {
+  overflow: hidden;
+}
+
+.faq-container .img-container .inside picture {
+  margin-left: -5rem;
+}
+
+.faq-container .quest-container {
+  padding: 3rem;
+}
+
+.faq-container .quest-container h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #4a4b5e;
+  margin-bottom: 1rem;
+}
+
+.faq-container .quest-container details {
+  border-bottom: 1px solid #e7e7e9;
+  width: 100%;
+  padding: 1rem;
+}
+
+.faq-container .quest-container details summary {
+  font-weight: 400;
+  font-size: 1rem;
+  list-style: none;
+  display: inline-block;
+  color: #787887;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: .7rem;
+}
+
+.faq-container .quest-container details summary:after {
+  content: url(/images/icon-arrow-down.svg);
+  float: right;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.faq-container .quest-container details summary:hover {
+  color: #f47c57;
+}
+
+.faq-container .quest-container details summary::-moz-selection {
+  color: #1d1e35;
+}
+
+.faq-container .quest-container details summary::selection {
+  color: #1d1e35;
+}
+
+.faq-container .quest-container details p {
+  color: #787887;
+  font-size: .8rem;
+}
+
+.faq-container .quest-container details[open] summary {
+  font-weight: 700;
+}
+
+.faq-container .quest-container details[open] summary:after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+@media (max-width: 890px) {
+  .faq-container {
+    width: 28rem;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+  }
+  .faq-container .img-container {
+    padding: 0;
+    margin: 0 auto;
+    margin-top: -6.8rem;
+  }
+  .faq-container .img-container .inside {
+    overflow: visible;
+  }
+  .faq-container .img-container .inside .img2 {
+    top: 6.2rem;
+    left: -3.1rem;
+  }
+  .faq-container .img-container .outside {
+    display: none;
+  }
+  .faq-container .quest-container {
+    padding: 2.3rem 1.5rem;
+  }
+  .faq-container .quest-container h2 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  .faq-container .quest-container p {
+    font-size: .7rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .faq-container .quest-container {
+    padding: .9rem;
+    padding-bottom: 2rem;
+  }
+  .faq-container .quest-container h2 {
+    font-size: 2rem;
+  }
+  .faq-container .quest-container details {
+    padding: .5rem;
+  }
+  .faq-container .quest-container details summary {
+    font-size: .8rem;
+    margin-bottom: .7rem;
+  }
+  .faq-container .quest-container details p {
+    font-size: .7rem;
+    padding-right: 1rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background-image: linear-gradient(#af67e9, #6565e7);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=style.css.map */

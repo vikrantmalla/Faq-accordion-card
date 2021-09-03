@@ -1,0 +1,137 @@
+@import './variable';
+.faq-container {
+    width: 58rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: white;
+    border-radius: 1rem;
+    margin: 2rem;
+    .img-container {
+        position: relative;
+        padding: 3.1rem 0;
+        z-index: 0;
+        .img2 {
+            position: absolute;
+            top: -18rem;
+            left: -36rem;
+            z-index: -1;
+        }
+        .outside {
+            position: absolute;
+            top: 11rem;
+            left: -5.6rem;
+        }
+        .inside {
+            overflow: hidden;
+        }
+        .inside picture {
+            margin-left: -5rem;
+        }
+    }
+    .quest-container {
+        padding: 3rem;
+        h2 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: $colorVerydarkgrayishblue;
+            margin-bottom: 1rem;
+        }
+        details {
+            border-bottom: 1px solid $colorLightgrayishblue;
+            width: 100%;
+            padding: 1rem;
+            summary {
+                font-weight: 400;
+                font-size: 1rem;
+                list-style: none;
+                display: inline-block;
+                color: $colorDarkgrayishblue;
+                cursor: pointer;
+                width: 100%;
+                margin-bottom: .7rem;
+                &:after {
+                    content: url(/images/icon-arrow-down.svg);
+                    float: right;
+                    transition: 0.4s;
+                }
+                &:hover {
+                    color: $coloSoftred;
+                }
+                &::selection {
+                    color: $colorVerydarkdesaturatedblue;
+                }
+            }
+            p {
+                color: $colorDarkgrayishblue;
+                font-size: .8rem;
+            }
+        }
+        details[open] {
+            summary {
+                font-weight: 700;
+                &:after {
+                    transform: rotate(180deg);
+                    transition: 0.4s;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 890px) {
+    .faq-container {
+        width: 28rem;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 7rem;
+        margin-bottom: 3rem;
+        .img-container {
+            padding: 0;
+            margin: 0 auto;
+            margin-top: -6.8rem;
+            .inside {
+                overflow: visible;
+                .img2 {
+                    top: 6.2rem;
+                    left: -3.1rem;
+                }
+            }
+            .outside {
+                display: none;
+            }
+        }
+        .quest-container {
+            padding: 2.3rem 1.5rem;
+            h2 {
+                text-align: center;
+                font-size: 1.8rem;
+            }
+            p {
+                font-size: .7rem;
+                padding-right: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .faq-container {
+        .quest-container {
+            padding: .9rem;
+            padding-bottom: 2rem;
+            h2 {
+                font-size: 2rem;
+            }
+            details {
+                padding: .5rem;
+                summary {
+                    font-size: .8rem;
+                    margin-bottom: .7rem;
+                }
+                p {
+                    font-size: .7rem;
+                    padding-right: 1rem;
+                }
+            }
+        }
+    }
+}
